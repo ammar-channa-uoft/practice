@@ -5,7 +5,8 @@ Created on Tue Feb 27 11:19:25 2024
 
 @author: mbellvila
 """
-
+#newly ran data 
+#changed nomenclature due to forepaw collected seperately and mouse name was different
 
 import numpy as np
 import scipy.io
