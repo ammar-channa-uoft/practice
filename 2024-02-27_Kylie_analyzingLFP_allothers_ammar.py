@@ -7,6 +7,7 @@ Created on Tue Feb 27 11:19:25 2024
 """
 # This code is to reprocess only the resampled LFP (channelwise subtraction) for data that Monica previously analyzed
 #in order to account for the fact that channels 0 and 16 are empty
+# Changes made from Monica's code: dropping channels 0&15, commented out unresampled data proessing as it is not necessary to rerun
 
 import numpy as np
 import scipy.io
