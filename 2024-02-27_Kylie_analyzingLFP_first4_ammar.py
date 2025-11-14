@@ -5,8 +5,8 @@ Created on Tue Feb 27 11:19:25 2024
 
 @author: mbellvila
 """
-#newly ran data 
-#changed nomenclature due to forepaw collected seperately and mouse name was different
+# This code is to process the newly sampled LFP data 
+# Changes made from Monica's code: dropping channels 0&15, changed nomenclature since baseline and forepaw were collected seperately, and mouse name is renamed to 'kyliemouse'
 
 import numpy as np
 import scipy.io
