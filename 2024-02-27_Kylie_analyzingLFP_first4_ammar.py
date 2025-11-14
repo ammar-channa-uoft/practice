@@ -24,7 +24,7 @@ from scipy.fft import fft as fft
 from multiprocessing import Pool
 
 #selecting the 4 newest experiments
-directories = sorted(glob.glob('/home/bellvila/projects/rrg-bojana/bellvila/Kylie/202*/'), reverse = True)[:4]
+directories = sorted(glob.glob('/home/achanna/projects/rrg-bojana/bellvila/Kylie/202*/'), reverse = True)[:4]
 
 f_amp = (30, 140, 5, 1)
 f_pha = (1, 29, 2, .5)
