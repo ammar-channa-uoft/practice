@@ -142,7 +142,7 @@ for directory in directories:
                 #power spectrum
                 for electrode in range(len(tolook1)):  
                     freq, pwrsp = powerspeccalc(pwrspwin*Fs, tolook1[electrode], Fs)
-                    pwrspdata.append([date, subtime, electrode, totdur, i, pwrspwin, Fs, freq, pwrsp, False])
+                    pwrspdata.append([date, subtime, electrode + 1, totdur, i, pwrspwin, Fs, freq, pwrsp, False])
                     # date, subtime, electrode, total duration of powerspec analyzed here, total duration window, window over which power spec is calculated
                     # sampling frequency, frequency array of power spectrum, power spectra for each pwrpswin within this totdur window, is it resampled?
                 
@@ -161,7 +161,7 @@ for directory in directories:
                             xpac = p.filterfit(Fs, windowdata, n_jobs=n_jobs).squeeze()
                             pval = p.infer_pvalues(p=0.05)        
                             xpac_smean = xpac[pval < .05].mean()  
-                            pacdata.append([date, subtime, electrode, totdur, i,pacwindow,pacwin, Fs, 'tort', False,  p, xpac, pval, xpac_smean])
+                            pacdata.append([date, subtime, electrode + 1, totdur, i,pacwindow,pacwin, Fs, 'tort', False,  p, xpac, pval, xpac_smean])
                             # date, subtime, electrode, total duration analyzed, total duration window, window over which pac is calculated
                             # sampling frequency,is it resampled?, pacmethod, pacresults, pacresults2, where pvals are significant, mean pval
 
