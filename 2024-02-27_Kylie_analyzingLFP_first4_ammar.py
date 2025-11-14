@@ -195,10 +195,10 @@ for directory in directories:
                     
             
 #saving the outputted data in my own folders            
-    with open("/scratch/achanna/kylie_edits/pwrsp_dec.pickle", "wb") as fp:   #Pickling
+    with open("/scratch/achanna/kylie_edits/" + date + "_pwrsp_dec.pickle", "wb") as fp:   #Pickling
         pickle.dump(pwrspdata, fp)
         
-    with open("/scratch/achanna/kylie_edits/pwrsp_dec.pickle", "wb") as fp:   #Pickling
+    with open("/scratch/achanna/kylie_edits/" + date + "_pac_dec.pickle", "wb") as fp:   #Pickling
         pickle.dump(pacdata, fp)
             
             
