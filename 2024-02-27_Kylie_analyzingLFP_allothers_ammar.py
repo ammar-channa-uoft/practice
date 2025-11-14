@@ -25,7 +25,7 @@ from scipy.fft import fft as fft
 from multiprocessing import Pool
 
 #selecting all experiments but the last 4
-directories = sorted(glob.glob('/home/bellvila/projects/rrg-bojana/bellvila/Kylie/202*/'), reverse = True)[4:]
+directories = sorted(glob.glob('/home/achanna/projects/rrg-bojana/bellvila/Kylie/202*/'), reverse = True)[4:]
 
 f_amp = (30, 140, 5, 1)
 f_pha = (1, 29, 2, .5)
@@ -83,9 +83,8 @@ def powerspeccalc(window, ephysdata, samplefreq):
 #loops over all experiment day folders
 for directory in directories:
     print(directory)
-    subdirectories = sorted(glob.glob(directory + 'Monica_Kylie_*/kyliemouse*')) #changing C57BL6J to kyliemouse (correct naming)
+    subdirectories = sorted(glob.glob(directory + 'Monica_Kylie_*/C57BL6J*')) #changing C57BL6J to kyliemouse (correct naming)
     date = directory[directory.find('202'):directory.find('202')+10] #Extracts date (eg. "2025-10-08") from the folder path string
-    baseline_subdirectories = subdirectories[::2] #ensuring only baseline data is analyzed, not forepaw
     
     pwrspdata = [] #to store power spectrum results
     pacdata = []   #to store phase-amplitude coupling results
