@@ -157,6 +157,8 @@ for directory in directories:
     megapwrspdf = pd.concat((megapwrspdf, pwrspdf), ignore_index = True)
     megapacdf = pd.concat((megapacdf, pacdf), ignore_index = True)
 
+megapwrspdf.to_pickle("/scratch/achanna/kylie_edits/megapwspdf_ammarrun.pk1")
+megapacdf.to_pickle("/scratch/achanna/kylie_edits/megapacdf_ammarrun.pk1")
 
 ##['2025-11-05', '131628', 'contra', 'C', 35, '39', 'M'],
 ['2025-11-05', '141358', 'ipsi', 'C', 35, '39', 'M'],
