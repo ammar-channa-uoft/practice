@@ -26,7 +26,7 @@ directories_old = directories_old[:-4] #drop last 4
 
 #newly run data (this is how each looks after: /home/achanna/projects/rrg-bojana/achanna/2025-10-10_)
 empty = []
-for pwr_file in sorted(glob.glob('/home/achanna/projects/rrg-bojana/achanna/kylie_edits/2025-*pwrsp_dec.pickle')):
+for pwr_file in sorted(glob.glob('/home/achanna/projects/rrg-bojana/achanna/kylie_edits/resampled_new/2025-*pwrsp_dec.pickle')):
     x = pwr_file.replace('_pwrsp_dec.pickle', '_')
     pac_file = x + 'pac_dec.pickle'
     empty.append(x)                             #eg. 2025-10-10_pac_dec.pickle
