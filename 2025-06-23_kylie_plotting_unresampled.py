@@ -223,7 +223,7 @@ plt.close('all')
 for freq in range(len(powspecfrqs)-1):
     fig, ax = plt.subplots()
     vals = []
-    for date in mouseinfodf['date'].unique():
+    for date in megapwrspdf['date'].unique():
         for electrode in megapwrspdf[megapwrspdf['resampled'] == False]['electrode'].unique():
             for stim in megapwrspdf['stim'].unique():
                 tolook = megapwrspdf[(megapwrspdf['resampled'] == False)&(megapwrspdf['date'] == date)&
@@ -307,7 +307,7 @@ plt.close('all')
 for freq in range(len(powspecfrqs)-1):
     fig, ax = plt.subplots()
     vals = []
-    for date in mouseinfodf['date'].unique():
+    for date in megapwrspdf['date'].unique():
         for electrode in megapwrspdf[megapwrspdf['resampled'] == False]['electrode'].unique():
             for stim in megapwrspdf['stim'].unique():
                 tolook = megapwrspdf[(megapwrspdf['resampled'] == False)&(megapwrspdf['date'] == date)&
@@ -413,7 +413,7 @@ for low in range(len(lows)):
     for high in range(len(highs)):
         fig, ax = plt.subplots()
         vals = []
-        for date in mouseinfodf['date'].unique():
+        for date in megapacdf['date'].unique():
             for electrode in megapacdf[megapacdf['resampled'] == False]['electrode'].unique():
                 for stim in megapacdf['stim'].unique():
                     tolook = megapacdf[(megapacdf['resampled'] == False)&(megapacdf['date'] == date)&
